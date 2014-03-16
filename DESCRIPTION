@@ -1,0 +1,11 @@
+Package: rcustom
+Title: R Custom
+Version: 0.1
+Author: Johan Junkka <johan.junkka@gmail.com>
+Maintainer: Johan Junkka <johan.junkka@gmail.com>
+Description: Custom helper functions
+Depends:
+    R (>= 3.0.3)
+License: MIT + file LICENSE
+LazyData: true
+Roxygen: list(wrap = FALSE)

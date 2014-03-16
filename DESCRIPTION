@@ -6,6 +6,8 @@ Maintainer: Johan Junkka <johan.junkka@gmail.com>
 Description: Custom helper functions
 Depends:
     R (>= 3.0.3)
+Imports:
+    knitr (>= 1.5)
 License: MIT + file LICENSE
 LazyData: true
 Roxygen: list(wrap = FALSE)

@@ -12,7 +12,7 @@ nas(x)
 A table with counts of NA TRUE and FALSE
 }
 \description{
-Get count of NA and non NA in vector
+Get counts and proportions of NA and non NA in vector
 }
 \author{
 Johan Junkka

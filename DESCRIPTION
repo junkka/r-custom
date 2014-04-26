@@ -9,3 +9,5 @@ Depends:
 License: MIT + file LICENSE
 LazyData: true
 Roxygen: list(wrap = FALSE)
+Suggests:
+    plyr

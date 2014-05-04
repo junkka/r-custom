@@ -6,12 +6,15 @@
 #' @return A matrix containing name and class of objects
 #' @author Johan Junkka
 
-lis <- function (order_by="class") 
+ll <- function (order_by="class") 
 {
-    xobjectsinenv <- as.data.frame(cbind(sapply(ls(envir = .GlobalEnv), function(xaobject) {
-        class(get(xaobject))
-    })))
-    if (nrow(xobjectsinenv) <= 0) 
+    xobjectsinenv <- as.data.frame(cbind(sapply(ls(envir = .GlobalEnv), 
+      function(xaobject) {
+        x <- class(get(xaobject))
+        x[1]
+      }
+    )))
+    if (nrow(xobjectsinenv) <= 0)
       xobjectsinenv <- "Empty environment"
     x <- data.frame("object" = rownames(xobjectsinenv), "class" = xobjectsinenv[,1])
     x <- x[order(x[,c(order_by)]), ]

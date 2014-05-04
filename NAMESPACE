@@ -2,6 +2,6 @@
 
 export(age_split)
 export(drop_c)
-export(lis)
+export(ll)
 export(nas)
 export(split_rows)

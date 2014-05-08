@@ -8,6 +8,6 @@
 R-custom
 }
 \author{
-Johan Juinkka \email{johan.junkka@gmail.com}
+Johan Junkka \email{johan.junkka@gmail.com}
 }
 

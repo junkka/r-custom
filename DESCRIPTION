@@ -9,5 +9,8 @@ Depends:
 License: MIT + file LICENSE
 LazyData: true
 Roxygen: list(wrap = FALSE)
+Imports:
+    sp,
+    rgdal
 Suggests:
     testthat

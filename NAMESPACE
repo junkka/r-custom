@@ -3,3 +3,6 @@
 export(drop_c)
 export(ll)
 export(nas)
+export(sp_to_json)
+import(rgdal)
+import(sp)

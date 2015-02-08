@@ -8,7 +8,7 @@
 #' @export
 
 ll <- function(..., n = 10) {
-    .ls.objects(..., order.by="Size", decreasing=TRUE, head=TRUE, n=n)
+    .ls.objects(..., order.by="Nsize", decreasing=TRUE, head=TRUE, n=n)
 }
 
 .ls.objects <- function (pos = 1, pattern, order.by,
@@ -19,13 +19,16 @@ ll <- function(..., n = 10) {
     obj.class <- napply(names, function(x) as.character(class(x))[1])
     obj.mode <- napply(names, mode)
     obj.type <- ifelse(is.na(obj.class), obj.mode, obj.class)
-    obj.size <- round(napply(names, object.size)/1000, 1)
+    obj.size <- napply(names, function(x) {
+        format(utils::object.size(x), units = "auto") 
+    })
+    obj.nsize <- napply(names, object.size)
     obj.dim <- t(napply(names, function(x)
                         as.numeric(dim(x))[1:2]))
     vec <- is.na(obj.dim)[, 1] & (obj.type != "function")
     obj.dim[vec, 1] <- napply(names, length)[vec]
-    out <- data.frame(obj.type, obj.size, obj.dim)
-    names(out) <- c("Type", "Size", "Rows", "Columns")
+    out <- data.frame(obj.type, obj.size, obj.dim, obj.nsize)
+    names(out) <- c("Type", "Size", "Rows", "Columns", "Nsize")
     if (!missing(order.by))
         out <- out[order(out[[order.by]], decreasing=decreasing), ]
     if (head)

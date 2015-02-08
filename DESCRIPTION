@@ -1,6 +1,6 @@
 Package: rcustom
 Title: R Custom
-Version: 0.2
+Version: 0.2.1
 Author: Johan Junkka <johan.junkka@gmail.com>
 Maintainer: Johan Junkka <johan.junkka@gmail.com>
 Description: Custom helper functions
@@ -11,6 +11,7 @@ License: MIT + file LICENSE
 LazyData: true
 Roxygen: list(wrap = FALSE)
 Imports:
+    ggplot2,
     sp,
     rgdal,
     plyr

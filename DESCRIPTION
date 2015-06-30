@@ -1,9 +1,9 @@
 Package: rcustom
 Title: R Custom
-Version: 0.2.1
+Version: 0.2.2
 Author: Johan Junkka <johan.junkka@gmail.com>
 Maintainer: Johan Junkka <johan.junkka@gmail.com>
-Description: Custom helper functions
+Description: Custom helper functions.
 URL: https://github.com/junkka/r-custom
 Depends:
     R (>= 3.0.3)
@@ -14,6 +14,8 @@ Imports:
     ggplot2,
     sp,
     rgdal,
-    plyr
+    plyr,
+    htmltools,
+    rvest
 Suggests:
     testthat

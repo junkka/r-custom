@@ -3,11 +3,11 @@
 #' With size and dimensions
 #'
 #' @param ... pass to \code{.ls.object}
-#' @param n number of objects to display
+#' @param n integer. Number of objects to display.
 #' @source \url{http://stackoverflow.com/questions/1358003}
 #' @export
 
-ll <- function(..., n = 10) {
+ll <- function(..., n = 20) {
     .ls.objects(..., order.by="Nsize", decreasing=TRUE, head=TRUE, n=n)
 }
 

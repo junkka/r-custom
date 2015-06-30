@@ -3,6 +3,9 @@
 \name{ghelp}
 \alias{ghelp}
 \title{GitHub help}
+\source{
+\url{https://gist.github.com/hrbrmstr/32e9c140129d7d51db52}
+}
 \usage{
 ghelp(topic, in_cran = TRUE)
 }

@@ -5,6 +5,7 @@
 #' @param topic character. A search string.
 #' @param in_cran logical. If TRUE the search is limited to CRAN 
 #'   repositories
+#' @source \url{https://gist.github.com/hrbrmstr/32e9c140129d7d51db52}
 #' @export
 #' @import htmltools rvest
 #' @examples

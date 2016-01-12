@@ -1,6 +1,6 @@
 Package: rcustom
 Title: R Custom
-Version: 0.2.2
+Version: 0.2.9999
 Author: Johan Junkka <johan.junkka@gmail.com>
 Maintainer: Johan Junkka <johan.junkka@gmail.com>
 Description: Custom helper functions.

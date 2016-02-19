@@ -12,10 +12,9 @@ LazyData: true
 Roxygen: list(wrap = FALSE)
 Imports:
     ggplot2,
-    sp,
-    rgdal,
     plyr,
     htmltools,
+    xml2,
     rvest
 Suggests:
     testthat

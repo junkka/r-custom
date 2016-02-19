@@ -7,7 +7,7 @@
 #'   repositories
 #' @source \url{https://gist.github.com/hrbrmstr/32e9c140129d7d51db52}
 #' @export
-#' @import htmltools rvest
+#' @import htmltools rvest xml2
 #' @examples
 #' ghelp('vapply')
 #' 
@@ -15,19 +15,15 @@
 
 ghelp <- function(topic, in_cran=TRUE) {
   # github search URL base
-  base_ext_url <- "https://github.com/search?utf8=%%E2%%9C%%93&type=Code&q=%s+language%%3AR"
+  base_ext_url <- "https://github.com/search?utf8=%%E2%%9C%%93&type=Code&q=%s+extension%%3AR"
   ext_url <- sprintf(base_ext_url, topic)
 
   # if searching with user:cran (the default) add that to the URL  
   if (in_cran) ext_url <- paste(ext_url, "+user%3Acran", sep="", collapse="")
   
-  # at the time of writing, "rvest" and "xml2" are undergoing some changes, so
-  # accommodate those of us who are on the bleeding edge of the hadleyverse
-  # either way, we are just extracting out the results <div> for viewing in 
-  # the viewer pane (it works in plain ol' R, too)
-  pg <- html(ext_url)
-  res_div <- paste(capture.output(html_node(pg, "div#code_search_results")), collapse="")
-
+  pg <- read_html(ext_url)
+  res_div <- as.character(html_nodes(pg, "div#code_search_results"))
+  
   # clean up the HTML a bit   
   res_div <- gsub('How are these search results\\? <a href="/contact">Tell us!</a>', '', res_div)
   # include a link to the results at the top of the viewer

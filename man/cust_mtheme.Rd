@@ -9,4 +9,3 @@ cust_mtheme()
 \description{
 Mimimal theme for ggplot2 maps, wihtout legend
 }
-

@@ -24,4 +24,3 @@ nas_c(x)
 \author{
 Johan Junkka \email{johan.junkka@gmail.com}
 }
-

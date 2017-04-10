@@ -16,4 +16,3 @@ Count lines in all R files in a certain path.
 count_lines()
 
 }
-

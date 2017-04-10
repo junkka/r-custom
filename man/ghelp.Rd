@@ -22,4 +22,3 @@ Search GitHub for R code examples.
 ghelp('vapply')
 
 }
-

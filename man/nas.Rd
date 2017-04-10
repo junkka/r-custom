@@ -18,4 +18,3 @@ Get counts and proportions of NA and non NA in vector
 \author{
 Johan Junkka
 }
-

@@ -9,4 +9,3 @@ cust_theme()
 \description{
 Mimimal theme for ggplot2
 }
-

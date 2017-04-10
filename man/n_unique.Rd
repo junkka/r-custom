@@ -25,4 +25,3 @@ n_unique(x$a)
 \author{
 Johan Junkka \email{johan.junkka@gmail.com}
 }
-

@@ -44,3 +44,21 @@ cust_theme <- function() {
   )
   res
 }
+
+#' ggplot2 thesis theme
+#' 
+#' Custom theme
+#' 
+#' @export 
+
+
+theme_thesis <- function(){
+  theme(
+    panel.background = element_rect(fill = NA),
+    panel.grid.major = element_line(colour = "grey80"),
+    legend.background = element_rect(fill = "white", colour = "grey60"),
+    legend.key = element_blank(),
+    axis.ticks = element_blank(),
+    strip.background = element_rect(fill = NA)
+  )
+}

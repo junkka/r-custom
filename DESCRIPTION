@@ -5,6 +5,7 @@ Author: Johan Junkka <johan.junkka@gmail.com>
 Maintainer: Johan Junkka <johan.junkka@gmail.com>
 Description: Custom helper functions.
 URL: https://github.com/junkka/r-custom
+Encoding: UTF-8
 Depends:
     R (>= 3.0.3)
 License: MIT + file LICENSE
@@ -19,4 +20,4 @@ Imports:
     stringr
 Suggests:
     testthat
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
